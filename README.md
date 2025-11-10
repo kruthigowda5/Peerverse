@@ -1,47 +1,37 @@
-# 🎓 Peerverse – Peer Learning Platform
+# Peerverse – Peer Learning Platform
 
 **Peerverse** is a full-stack web app that connects mentors and learners for micro-learning sessions.  
 Mentors can upload videos, while learners explore content, earn badges, and get AI-powered skill recommendations.
 
----
+- Frontend: Next.js + Tailwind CSS
+- Backend: Django REST Framework + PostgreSQL
+- Auth: JWT + Google OAuth
+- Realtime: WebRTC/Zoom integration (planned)
+- AI: FastAPI microservice (cosine similarity)
+- Deploy: Vercel (frontend) + Render (backend)
 
-## ⚙️ Tech Stack
-- **Frontend:** Next.js • TypeScript • Tailwind CSS • shadcn/ui  
-- **Backend:** Django REST Framework  
-- **Database:** PostgreSQL / SQLite  
-- **Auth:** JWT + Google OAuth  
-- **AI:** FastAPI (cosine similarity for recommendations)
+## Quickstart
 
----
+1) Copy environment template
 
-## 🚀 Features
-- 👥 Separate dashboards for Mentors & Learners  
-- 🎥 Mentor video uploads  
-- 🧠 AI-based skill recommendations  
-- 🏅 Badges and gamification  
-- 🔒 Secure authentication  
-- 💬 (Coming soon) Comments, chat & live sessions
-
----
-
-## File Structure
-frontend/ → Next.js frontend
-backend/ → Django REST API
-ai_service/ → FastAPI microservice
-docs/ → Setup notes
-
-yaml
-Copy code
-
----
-
-##  Quickstart
 ```bash
-git clone https://github.com/kruthigowda5/Peerverse.git
-cd Peerverse
 cp .env.example .env
-docker compose up -d db
-🧑‍💻 Developer
-Developed by: Kruthi Gowda
+```
 
-⭐ Project under active development — new features coming soon!
+2) Bring up infrastructure (Postgres). Backend/AI images will build but backend will fail until Django is initialized.
+
+```bash
+docker compose up -d db
+```
+
+3) Initialize backend and frontend (see docs/README.md for detailed steps).
+
+## Folders
+
+- /frontend – Next.js app
+- /backend – Django REST API
+- /ai_service – FastAPI microservice
+- /docs – Setup and developer notes
+
+## License
+MIT
