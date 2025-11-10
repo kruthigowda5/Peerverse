@@ -1,0 +1,9 @@
+Django>=5.0,<6.0
+djangorestframework>=3.15.0,<3.16
+drf-spectacular>=0.27.0,<0.28
+djangorestframework-simplejwt>=5.3.1,<6.0
+django-cors-headers>=4.3.0,<5.0
+psycopg2-binary>=2.9.9,<3.0
+django-environ>=0.11.2,<0.12
+social-auth-app-django>=5.4.0,<6.0
+Pillow>=10.0.0,<11.0
