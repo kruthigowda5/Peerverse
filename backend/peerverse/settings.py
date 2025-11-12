@@ -18,9 +18,14 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env(
-    DEBUG=(bool, True),
+    DEBUG=(bool, False)
 )
-environ.Env.read_env(os.path.join(BASE_DIR.parent, ".env"))
+
+# Only read the local .env file if it exists (for local dev)
+env_file = os.path.join(BASE_DIR.parent, ".env")
+if os.path.exists(env_file):
+    environ.Env.read_env(env_file)
+
 
 
 # Quick-start development settings - unsuitable for production
