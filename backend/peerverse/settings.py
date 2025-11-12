@@ -37,9 +37,24 @@ SECRET_KEY = env("DJANGO_SECRET_KEY", default="insecure")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG", default=True)
 
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["localhost", "127.0.0.1"]) 
-CSRF_TRUSTED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=["http://localhost:3000"]) 
-CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=["http://localhost:3000"]) 
+ALLOWED_HOSTS = env.list(
+    "DJANGO_ALLOWED_HOSTS",
+    default=[
+        "peerverse-backend.onrender.com",
+        "localhost",
+        "127.0.0.1",
+    ],
+)
+
+CORS_ALLOWED_ORIGINS = [
+    "https://peerverse-frontend.onrender.com",
+    "http://localhost:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://peerverse-frontend.onrender.com",
+    "http://localhost:3000",
+]
 
 
 # Application definition
